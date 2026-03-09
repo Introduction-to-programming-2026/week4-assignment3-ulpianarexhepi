@@ -23,3 +23,29 @@ Rules:
 - No recursion allowed.
 - Output must match exactly.
 */
+
+
+#include<stdio.h>
+
+void draw(int n);
+
+int main(void)
+{
+    int n;
+    printf("Height:");
+    scanf("%d", &n);
+
+    draw(n);
+}
+
+void draw(int n)
+{
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0;j<i+1;j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}

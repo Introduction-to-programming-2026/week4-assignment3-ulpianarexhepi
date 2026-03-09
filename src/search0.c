@@ -17,3 +17,26 @@ Rules:
 - You must use a loop.
 - Do NOT use any built-in search function.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+   int numbers[]={20,500,10,5,100,1,50};
+
+    printf("what number are u searching for?\n");
+    scanf("%d",&n);
+
+    for(int i=0;i<7;i++)
+    {
+        if(n==numbers[i])
+        {
+            printf("Found number %d\n",numbers[i]);
+        }
+
+    }
+
+
+    return 0;
+}

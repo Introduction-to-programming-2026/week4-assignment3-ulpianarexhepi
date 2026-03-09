@@ -18,3 +18,37 @@ Rules:
 - You cannot use a loop to print rows.
 - Base case must be correct.
 */
+#include <cs50.h>
+#include <stdio.h>
+void draw(int n);
+void print_row(int n);
+int main(void)
+{
+    int height = get_int("Height: ");
+    draw(height);
+}
+
+void draw(int n)
+{
+    if (n <= 0)
+    {
+        return;
+    }
+
+    draw(n - 1);
+
+    print_row(n);
+
+    printf("\n");
+}
+
+void print_row(int n)
+{
+    if (n <= 0)
+    {
+        return;
+    }
+
+    printf("#");
+    print_row(n - 1);
+}
